@@ -97,3 +97,14 @@ This is a simple banking system API implemented using Flask. The API allows user
    python3 -m unittest discover tests
     ```
 This command will discover and run all the unit tests in the tests directory.
+
+## Rate Limiting The API has rate limits to prevent abuse:
+
+    Account creation: 10 requests per minute
+    Deposit: 20 requests per minute
+    Withdraw: 20 requests per minute
+    Transfer: 10 requests per minute
+
+## Logging
+
+Transaction logs are saved in logs/transactions.log. You can check this file to see logs for deposits, withdrawals, and transfers.
